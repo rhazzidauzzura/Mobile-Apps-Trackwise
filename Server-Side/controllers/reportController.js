@@ -21,16 +21,16 @@ class reportController {
 
       if (!file) {
         throw { name: "NotFound" };
+      } else {
+        const result = await sendFile(file);
+
+        console.log(result);
+        const photo = result.secure_url;
+
+        const report = await Report.create({ name, age, characteristic, long, lat, photo });
+
+        res.status(201).json({ message: "Report Sent Successfully" });
       }
-
-      const result = await sendFile(file);
-
-      console.log(result);
-      const photo = result.secure_url;
-
-      const report = await Report.create({ name, age, characteristic, long, lat, photo });
-
-      res.status(201).json({ message: "Report Sent Successfully" });
     } catch (error) {
       console.log(error);
       next(error);
