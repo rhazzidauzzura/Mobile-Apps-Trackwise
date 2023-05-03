@@ -1,0 +1,14 @@
+[
+  {
+    "username": "Aman",
+    "email": "adm@admin.com",
+    "password": "12345",
+    "phoneNumber": "081779556055"
+  },
+  {
+    "username": "Rhazzid",
+    "email": "adm2@admin.com",
+    "password": "12345",
+    "phoneNumber": "081779999052"
+  }
+]
