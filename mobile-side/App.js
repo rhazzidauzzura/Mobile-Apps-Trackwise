@@ -44,7 +44,7 @@ export default function App() {
 
       formData.append('name', state.name)
       formData.append('age', state.ages)
-      formData.append('characteristic', state.description)
+      formData.append('description', state.description)
       formData.append('image', { name: new Date().getTime() + "_img", uri: takedImage, type: "image/jpeg" })
       formData.append('long', location.coords.longitude)
       formData.append('lat', location.coords.latitude)
