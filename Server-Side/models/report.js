@@ -29,12 +29,12 @@ module.exports = (sequelize, DataTypes) => {
           notNull: { msg: "Age Cannot Be Empty" },
         },
       },
-      characteristic: {
+      description: {
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
-          notEmpty: { msg: "Characteristic Cannot Be Empty" },
-          notNull: { msg: "Characteristic Cannot Be Empty" },
+          notEmpty: { msg: "Description Cannot Be Empty" },
+          notNull: { msg: "Description Cannot Be Empty" },
         },
       },
       long: {

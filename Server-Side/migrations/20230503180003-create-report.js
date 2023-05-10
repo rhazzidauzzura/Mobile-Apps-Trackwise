@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      characteristic: {
+      description: {
         type: Sequelize.TEXT,
         allowNull: false,
       },

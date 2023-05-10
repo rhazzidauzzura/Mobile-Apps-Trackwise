@@ -64,7 +64,7 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView >
+    <SafeAreaView>
       <View style={styles.container}>
         <Image
           source={{ uri: 'https://clipground.com/images/png-tracking-1.png' }}
@@ -89,7 +89,7 @@ export default function App() {
             <Image source={{ uri: takedImage }} style={{ width: 100, height: 120 }} />
           }
           <TouchableOpacity onPress={handleCamera} style={styles.btn}>
-            <Text style={{ textAlign: 'center', fontWeight: 600 }}>Upload Image</Text>
+            <Text style={{ textAlign: "center", fontWeight: 600 }}>Upload Image</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={handleSubmit} style={styles.btn}>
             <Text style={{ textAlign: 'center', fontWeight: 600 }}>Report</Text>
@@ -102,8 +102,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    padding: 15
+    alignItems: "center",
+    padding: 15,
+    marginTop: 20,
   },
   card: {
     borderWidth: 1,
@@ -112,11 +113,31 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   input: {
-    backgroundColor: '#f4f4f4',
+    backgroundColor: "#f4f4f4",
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 8,
     marginVertical: 5,
   },
-  btn: { padding: 10, marginTop: 10, borderRadius: 20, backgroundColor: '#ccff00' }
+  btn: {
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 20,
+    color: "white",
+    backgroundColor: "#0080ff",
+  },
+  btnReport: {
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 20,
+    color: "white",
+    backgroundColor: "red",
+  },
+  img: {
+    width: 130,
+    height: 160,
+    marginHorizontal: "30%",
+    borderRadius: 10,
+    marginTop: 10,
+  },
 });
