@@ -33,7 +33,7 @@ export default function Navbar(params) {
               data-dropdown-placement="bottom"
             >
               <span className="sr-only">Open user menu</span>
-              <img className="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo" />
+              <img className="w-8 h-8 rounded-full" src="https://tse3.mm.bing.net/th?id=OIP.GlIuUj-GYrRL_G8WvZ3YagHaHw&pid=Api&P=0" alt="user photo" />
             </button>
             {/* <!-- Dropdown menu --> */}
             <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">

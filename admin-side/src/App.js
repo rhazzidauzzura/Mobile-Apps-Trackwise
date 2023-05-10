@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 
 function App() {
   return (
-    <div className="App max-w-[85%] mx-auto">
+    <div className="App ">
       <Provider store={store}>
         <RouterProvider router={router} />
       </Provider>
