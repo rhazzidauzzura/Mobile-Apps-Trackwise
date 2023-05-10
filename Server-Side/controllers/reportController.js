@@ -15,7 +15,7 @@ class reportController {
 
   static async postReport(req, res, next) {
     try {
-      let { name, age, characteristic, long, lat } = req.body;
+      let { name, age, description, long, lat } = req.body;
       console.log(req.file);
       const file = req.file;
 
@@ -27,7 +27,7 @@ class reportController {
         console.log(result);
         const photo = result.secure_url;
 
-        const report = await Report.create({ name, age, characteristic, long, lat, photo });
+        const report = await Report.create({ name, age, description, long, lat, photo: photo });
 
         res.status(201).json({ message: "Report Sent Successfully" });
       }
@@ -39,12 +39,12 @@ class reportController {
 
   static async getReportById(req, res, next) {
     try {
-      const { id } = req.params;
-      const reportById = await Report.findOne({ where: { id } });
+      const { reportId } = req.params;
+      const reportById = await Report.findOne({ where: { id: reportId } });
       if (!reportById) {
         return res.status(404).json({ message: `Report Not Found` });
       }
-      res.status(200).json(productById);
+      res.status(200).json(reportById);
     } catch (error) {
       next(error);
     }
