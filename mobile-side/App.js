@@ -61,7 +61,7 @@ export default function App() {
       formData.append('image', { name: new Date().getTime() + "_img", uri: takedImage, type: "image/jpeg" })
       formData.append('long', location.coords.longitude)
       formData.append('lat', location.coords.latitude)
-      const res = await axios.post('https://63d1-120-188-5-182.ngrok-free.app/report', formData, {
+      const res = await axios.post('https://wild-flannel-shirt-foal.cyclic.app/report', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
