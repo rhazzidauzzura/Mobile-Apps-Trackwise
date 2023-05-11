@@ -27,7 +27,7 @@ export default function Dashboard(params) {
         </div>
       ) : (
         <div className="flex justify-center mt-10">
-          <div className="overflow-x-auto w-[80%] ">
+          <div className="overflow-x-auto w-[90%] ">
             <table className="table w-full ml-16">
               {/* head */}
               <thead>
@@ -35,7 +35,7 @@ export default function Dashboard(params) {
                   <th>No</th>
                   <th>Foto</th>
                   <th>Name</th>
-                  <th>Ages</th>
+                  <th>Age</th>
                   <th>Description</th>
                   <th></th>
                 </tr>

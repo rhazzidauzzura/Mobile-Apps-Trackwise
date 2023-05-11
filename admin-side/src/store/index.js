@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import axios from "axios";
 
-// let url = "http://localhost:3000";
-let url = "https://wild-flannel-shirt-foal.cyclic.app";
+let url = "http://localhost:3000";
+// let url = "https://wild-flannel-shirt-foal.cyclic.app";
 
 const initialize = {
   reports: [],
@@ -12,7 +12,9 @@ const initialize = {
 
 export function fetchReports(type) {
   return async (dispatch) => {
-    const res = await axios.get(`${url}/reports`);
+    const res = await axios.get(`${url}/reports`, {
+      headers: { access_token: localStorage.getItem("access_token") },
+    });
     console.log(res);
 
     dispatch({
@@ -25,7 +27,9 @@ export function fetchReports(type) {
 export const reportById = (id) => {
   //   console.log(id, "ini aidi");
   return async (dispatch) => {
-    const res = await axios.get(`${url}/report/${id}`);
+    const res = await axios.get(`${url}/report/${id}`, {
+      headers: { access_token: localStorage.getItem("access_token") },
+    });
 
     dispatch({
       type: "reportById/fetchSuccess",

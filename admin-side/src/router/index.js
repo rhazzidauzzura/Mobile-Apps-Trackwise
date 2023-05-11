@@ -5,6 +5,7 @@ import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import Details from "../pages/Details";
 import Location from "../pages/Location";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/location",
-        element: <Location />,
+        path: "/register",
+        element: <Register />,
       },
       {
         path: "/details/:id",
