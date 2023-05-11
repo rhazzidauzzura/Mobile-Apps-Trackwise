@@ -2,7 +2,8 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import axios from "axios";
 
-let url = "http://localhost:3000";
+// let url = "http://localhost:3000";
+let url = "https://wild-flannel-shirt-foal.cyclic.app";
 
 const initialize = {
   reports: [],
