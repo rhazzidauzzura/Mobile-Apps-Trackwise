@@ -4,8 +4,8 @@ import { redirect } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const baseUrl = "http://localhost:3000";
-// const baseUrl = "https://wild-flannel-shirt-foal.cyclic.app";
+// const baseUrl = "http://localhost:3000";
+const baseUrl = "https://wild-flannel-shirt-foal.cyclic.app";
 
 export default function Register(props) {
   const navigate = useNavigate();
@@ -27,43 +27,6 @@ export default function Register(props) {
 
     setForm(newForm);
   };
-  // console.log(form);
-  //   const submitForm = (e) => {
-  //     e.preventDefault();
-  //     fetch(`${baseUrl}/register`, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(form),
-  //     })
-  //       .then(async (response) => {
-  //         if (!response.ok) {
-  //           const error = await response.json();
-  //           throw new Error(error.message);
-  //         }
-  //         return response.json();
-  //       })
-  //       .then((data) => {
-  //         console.log("Success:", data);
-  //         Swal.fire({
-  //           position: "top-end",
-  //           icon: "success",
-  //           title: data.message,
-  //           showConfirmButton: false,
-  //           timer: 1500,
-  //         });
-  //         navigate("/");
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error:", error.message);
-  //         Swal.fire({
-  //           icon: "error",
-  //           title: "Oops...",
-  //           text: error.message,
-  //         });
-  //       });
-  //   };
 
   const submitForm = async (e) => {
     e.preventDefault();
