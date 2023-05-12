@@ -1,0 +1,16 @@
+{
+  "id": {
+    "name": "Nama",
+    "ages": "Umur",
+    "description": "Deskripsi",
+    "upload-image": "Unggah Gambar",
+    "submit": "Kirim"
+  },
+  "en": {
+    "name": "Name",
+    "ages": "Ages",
+    "description": "Description",
+    "upload-image": "Upload Image",
+    "submit": "Submit"
+  }
+}
