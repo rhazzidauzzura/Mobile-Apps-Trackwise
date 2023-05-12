@@ -1,0 +1,18 @@
+{
+  "photo": "Foto",
+  "name": "Nama",
+  "description": "Deskripsi",
+  "age": "Umur",
+  "home": "Beranda",
+  "add-admin": "Tambah Admin",
+  "logout": "Keluar",
+  "detail-title": "DETAIL LAPORAN",
+  "admin-create": "Admin Berhasil Ditambahkan",
+  "admin-new": "Daftar Admin Baru",
+  "username": "Nama Pengguna",
+  "password": "Kata Sandi",
+  "phone-number": "Nomer Telpon",
+  "save": "Simpan",
+  "forgot": "Lupa",
+  "signin-title": "Masuk Ke Akun Anda"
+}
