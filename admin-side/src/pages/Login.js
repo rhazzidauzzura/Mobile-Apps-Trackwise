@@ -26,16 +26,16 @@ export default function Login(props) {
 
     setForm(newForm);
   };
-  console.log(form);
+
   const submitForm = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(`${baseUrl}/login`, form);
       localStorage.setItem("access_token", response.data.access_token);
       navigate("/");
-      console.log(response);
+      // console.log(response);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       Swal.fire({
         icon: "error",
         title: "Oops...",

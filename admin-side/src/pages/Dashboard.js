@@ -21,13 +21,14 @@ export default function Dashboard(params) {
   }, []);
   return (
     <>
-      {loading ? (
+      {loading && (
         <div className="relative shadow-md sm:rounded-lg mt-[15%] w-full md:w-full sm:[50%]">
           <div className="flex content-center justify-center  ">
             <ClipLoader color={"gray-900"} loading={loading} size={100} aria-label="Loading Spinner" data-testid="loader" />
           </div>
         </div>
-      ) : (
+      )}
+      {!loading && reports && reports.data && (
         <div className="flex justify-center mt-10">
           <div className="overflow-x-auto w-[90%] ">
             <table className="table w-full ml-16">
