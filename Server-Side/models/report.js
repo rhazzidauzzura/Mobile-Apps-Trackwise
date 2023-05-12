@@ -55,11 +55,6 @@ module.exports = (sequelize, DataTypes) => {
       },
       photo: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notEmpty: { msg: "Photo Cannot Be Empty" },
-          notNull: { msg: "Photo Cannot Be Empty" },
-        },
       },
     },
 
