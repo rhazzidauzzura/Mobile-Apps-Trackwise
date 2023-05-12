@@ -12,7 +12,7 @@ export default function Table(props) {
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="mask mask-squircle w-12 h-12">
-              <a href={reports.photo} target="_blank" rel="noreferrer">
+              <a href={reports.photo}>
                 <img src={reports.photo} alt="Avatar Tailwind CSS Component" />
               </a>
             </div>
@@ -20,9 +20,10 @@ export default function Table(props) {
         </div>
       </td>
       <td>
-        <p className="font-semibold text-lg uppercase dark:text-white">{reports.name}</p>
+        <p className="font-semibold  uppercase dark:text-white">{reports.name}</p>
       </td>
       <td>{reports.age}</td>
+      <td>{reports.from}</td>
       <td className="text-[#ff0000]">{reports.description}</td>
       <Link to={`/details/${reports.id}`}>
         <td>

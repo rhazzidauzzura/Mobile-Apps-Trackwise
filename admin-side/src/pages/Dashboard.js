@@ -35,10 +35,11 @@ export default function Dashboard(params) {
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>{t('photo')}</th>
-                  <th>{t('name')}</th>
-                  <th>{t('age')}</th>
-                  <th>{t('description')}</th>
+                  <th>{t("photo")}</th>
+                  <th>{t("name")}</th>
+                  <th>{t("age")}</th>
+                  <th>{t("from")}</th>
+                  <th>{t("description")}</th>
                   <th></th>
                 </tr>
               </thead>

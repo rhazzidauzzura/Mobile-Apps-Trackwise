@@ -5,12 +5,12 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 
-// const baseUrl = "http://localhost:3000";
-const baseUrl = "https://wild-flannel-shirt-foal.cyclic.app";
+const baseUrl = "http://localhost:3000";
+// const baseUrl = "https://wild-flannel-shirt-foal.cyclic.app";
 
 export default function Login(props) {
   const navigate = useNavigate();
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -48,7 +48,7 @@ export default function Login(props) {
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img className="mx-auto h-20 w-auto" src="https://clipground.com/images/png-tracking-1.png" alt="Your Company" />
         <h2 className="mt-4 text-center text-2xl font-semibold font-serif text-gray-700">TrackWise</h2>
-        <h2 className="mt-10 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">{t('signin-title')}</h2>
+        <h2 className="mt-10 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">{t("signin-title")}</h2>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -74,11 +74,11 @@ export default function Login(props) {
           <div>
             <div className="flex items-center justify-between">
               <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                {t('password')}
+                {t("password")}
               </label>
               <div className="text-sm">
                 <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                  {t('forgot')} {t('password')}?
+                  {t("forgot")} {t("password")}?
                 </a>
               </div>
             </div>
