@@ -16,6 +16,8 @@ class reportController {
   static async postReport(req, res, next) {
     try {
       let { name, age, from, description, long, lat } = req.body;
+
+      console.log(req.body);
       const file = req.file;
 
       if (file) {
