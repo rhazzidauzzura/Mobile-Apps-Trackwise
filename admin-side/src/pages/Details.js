@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { reportById } from "../store";
 import { useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import { useTranslation } from "react-i18next";
 
 const Details = () => {
   const [loading, setLoading] = useState(false);
   const report = useSelector((state) => state.report);
   const dispatch = useDispatch();
   const { id } = useParams();
-
-  console.log(report);
+  const { t } = useTranslation()
 
   useEffect(() => {
     setLoading(true);
@@ -32,7 +32,7 @@ const Details = () => {
       )}
       {!loading && report && report.data && (
         <>
-          <h1 className="text-center mb-[5rem] font-bold font-serif text-2xl dark:text-white">DETAIL TRACKER HISTORY REPORT</h1>
+          <h1 className="text-center mb-[5rem] font-bold font-serif text-2xl dark:text-white">{t("detail-title")}</h1>
           <div className="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
             <div className="flex flex-col gap-4 lg:w-2/4">
               <Location lat={report.data.lat} long={report.data.long} />
@@ -43,9 +43,9 @@ const Details = () => {
                 <img src={report.data.photo} alt="" className="w-24 h-24 rounded-md cursor-pointer" />
               </a>
               <div>
-                <h1 className="text-2xl font-semibold font-serif">Name: {report.data.name}</h1>
-                <h1 className="text-2xl font-semibold mt-4 font-serif">Age: {report.data.age}</h1>
-                <h1 className="text-2xl font-semibold mt-4 font-serif">Description: </h1>
+                <h1 className="text-2xl font-semibold font-serif">{t('name')}: {report.data.name}</h1>
+                <h1 className="text-2xl font-semibold mt-4 font-serif">{t('age')}: {report.data.age}</h1>
+                <h1 className="text-2xl font-semibold mt-4 font-serif">{t('description')}: </h1>
               </div>
               <p className="text-gray-800">{report.data.description}</p>
             </div>

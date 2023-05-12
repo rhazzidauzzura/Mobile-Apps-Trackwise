@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useTranslation } from "react-i18next";
 
 // const baseUrl = "http://localhost:3000";
 const baseUrl = "https://wild-flannel-shirt-foal.cyclic.app";
 
 export default function Login(props) {
   const navigate = useNavigate();
-
+  const { t } = useTranslation()
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -47,14 +48,14 @@ export default function Login(props) {
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img className="mx-auto h-20 w-auto" src="https://clipground.com/images/png-tracking-1.png" alt="Your Company" />
         <h2 className="mt-4 text-center text-2xl font-semibold font-serif text-gray-700">TrackWise</h2>
-        <h2 className="mt-10 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
+        <h2 className="mt-10 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">{t('signin-title')}</h2>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form onSubmit={submitForm} className="space-y-6" action="#" method="POST">
           <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-              Email Address
+              Email
             </label>
             <div className="mt-2">
               <input
@@ -73,11 +74,11 @@ export default function Login(props) {
           <div>
             <div className="flex items-center justify-between">
               <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                Password
+                {t('password')}
               </label>
               <div className="text-sm">
                 <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                  Forgot password?
+                  {t('forgot')} {t('password')}?
                 </a>
               </div>
             </div>

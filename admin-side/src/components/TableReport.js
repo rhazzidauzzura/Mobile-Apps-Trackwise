@@ -12,7 +12,7 @@ export default function Table(props) {
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="mask mask-squircle w-12 h-12">
-              <a href={reports.photo}>
+              <a href={reports.photo} target="_blank" rel="noreferrer">
                 <img src={reports.photo} alt="Avatar Tailwind CSS Component" />
               </a>
             </div>

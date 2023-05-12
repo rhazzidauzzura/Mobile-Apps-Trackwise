@@ -4,11 +4,13 @@ import Table from "../components/TableReport";
 import { useEffect, useState } from "react";
 import { fetchReports } from "../store";
 import ClipLoader from "react-spinners/ClipLoader";
+import { useTranslation } from "react-i18next";
 
 export default function Dashboard(params) {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const reports = useSelector((state) => state.reports);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setLoading(true);
@@ -33,10 +35,10 @@ export default function Dashboard(params) {
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Foto</th>
-                  <th>Name</th>
-                  <th>Age</th>
-                  <th>Description</th>
+                  <th>{t('photo')}</th>
+                  <th>{t('name')}</th>
+                  <th>{t('age')}</th>
+                  <th>{t('description')}</th>
                   <th></th>
                 </tr>
               </thead>
@@ -49,29 +51,6 @@ export default function Dashboard(params) {
             </table>
           </div>
         </div>
-        // <div className="my-10">
-        //   <div className="flex overflow-x-auto w-full justify-centen">
-        //     <table className="table w-full">
-        //       {/* head */}
-        //       <thead>
-        //         <tr>
-        //           <th>No.</th>
-        //           <th>Foto</th>
-        //           <th>Name</th>
-        //           <th>Ages</th>
-        //           <th>Description</th>
-        //           <th></th>
-        //         </tr>
-        //       </thead>
-        //       <tbody>
-        //         {/* row 1 */}
-        //         {reports?.data?.map((el, index) => {
-        //           return <Table key={el.id} reports={el} index={index} />;
-        //         })}
-        //       </tbody>
-        //     </table>
-        //   </div>
-        // </div>
       )}
     </>
   );

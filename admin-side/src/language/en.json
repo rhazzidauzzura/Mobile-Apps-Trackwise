@@ -1,0 +1,18 @@
+{
+  "photo": "Photo",
+  "name": "Name",
+  "description": "Description",
+  "age": "Age",
+  "home": "Home",
+  "add-admin": "Add Admin",
+  "logout": "Logout",
+  "detail-title": "REPORT DETAIL",
+  "admin-create": "Created Admin Successfully",
+  "admin-new": "Register New Admin",
+  "username": "Username",
+  "password": "Password",
+  "phone-number": "Phone Number",
+  "save": "Save",
+  "forgot": "Forgot",
+  "signin-title": "Sign in to your account"
+}
