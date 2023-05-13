@@ -8,8 +8,8 @@ const { generateToken } = require("../helpers/jwt");
 class UserController {
   static async register(req, res, next) {
     try {
-      const { username, email, password, birthPlace, birthDate, address, role, phoneNumber } = req.body;
-      const register = await User.create({ username, email, password, birthPlace, birthDate, address, role, phoneNumber });
+      const { username, email, password, NIK, birthPlace, birthDate, address, role, phoneNumber } = req.body;
+      const register = await User.create({ username, email, password, NIK, birthPlace, birthDate, address, role, phoneNumber });
 
       res.status(201).json({
         message: `User with email ${email} has been succesfully registered`,

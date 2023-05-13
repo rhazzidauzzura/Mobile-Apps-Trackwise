@@ -25,6 +25,7 @@ module.exports = {
       NIK: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
       birthPlace: {
         type: Sequelize.STRING,
