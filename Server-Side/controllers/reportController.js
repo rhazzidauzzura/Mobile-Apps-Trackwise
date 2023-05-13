@@ -15,7 +15,7 @@ class reportController {
 
   static async postReport(req, res, next) {
     try {
-      let { name, message, long, lat, phoneNumber } = req.body;
+      let { name, NIK, message, long, lat, phoneNumber } = req.body;
 
       console.log(req.body);
       const file = req.file;
@@ -23,9 +23,9 @@ class reportController {
       if (file) {
         const result = await sendFile(file);
         const photo = result.secure_url;
-        const report = await Report.create({ name, age, message, long, lat, phoneNumber, photo: photo });
+        const report = await Report.create({ name, NIK, age, message, long, lat, phoneNumber, photo: photo });
       } else {
-        const report = await Report.create({ name, age, message, long, lat, phoneNumber, photo: "" });
+        const report = await Report.create({ name, NIK, age, message, long, lat, phoneNumber, photo: "" });
       }
 
       res.status(201).json({ message: "Report Sent Successfully" });
