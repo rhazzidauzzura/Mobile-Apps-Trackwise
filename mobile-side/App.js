@@ -131,7 +131,7 @@ export default function App() {
           )}
           <TextInput value={state.name} onChangeText={(val) => setState({ ...state, name: val })} style={styles.input} placeholder={lang[currLang].name} />
           <TextInput value={state.ages} onChangeText={(val) => setState({ ...state, ages: val })} keyboardType="number-pad" style={styles.input} placeholder={lang[currLang].ages} />
-          <TextInput value={state.from} onChangeText={(val) => setState({ ...state, from: val })} keyboardType="number-pad" style={styles.input} placeholder={lang[currLang].from} />
+          <TextInput value={state.from} onChangeText={(val) => setState({ ...state, from: val })} style={styles.input} placeholder={lang[currLang].from} />
           <TextInput multiline={true} numberOfLines={4} style={styles.input} textAlignVertical="top" placeholder={lang[currLang].description} value={state.description} onChangeText={(val) => setState({ ...state, description: val })} />
           {takedImage && <Image source={{ uri: takedImage }} style={{ width: 100, height: 120 }} />}
           <TouchableOpacity onPress={handleCamera} style={styles.btn}>
