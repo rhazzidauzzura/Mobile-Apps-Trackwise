@@ -1,20 +1,14 @@
-const { Food, User, Category } = require("../models");
+const { Report, User } = require("../models");
 
 async function authorization(req, res, next) {
   try {
-    let foodId = req.params.foodId;
+    // let reportId = req.params.reportId;
     let userId = req.user.id;
     // console.log(userId);
 
     let user = await User.findByPk(userId);
-    if (user.role == "staff") {
-      let food = await Food.findByPk(foodId);
-      if (!food) {
-        throw { name: "NotFound" };
-      }
-      if (userId !== food.authorId) {
-        throw { name: "Forbidden" };
-      }
+    if (user.role !== "penindak") {
+      throw { name: "Forbidden" };
     }
     next();
   } catch (error) {
@@ -23,28 +17,28 @@ async function authorization(req, res, next) {
   }
 }
 
-async function authorizationForAdmin(req, res, next) {
-  try {
-    let { foodId } = req.params;
-    let userId = req.user.id;
-    // console.log(userId);
+// async function authorizationForAdmin(req, res, next) {
+//   try {
+//     let { foodId } = req.params;
+//     let userId = req.user.id;
+//     // console.log(userId);
 
-    let user = await User.findByPk(userId);
-    if (user.role == "admin") {
-      let food = await Food.findByPk(foodId);
-      console.log(food);
-      if (!food) {
-        throw { name: "NotFound" };
-      }
-    } else {
-      throw { name: "Forbidden" };
-    }
+//     let user = await User.findByPk(userId);
+//     if (user.role == "admin") {
+//       let food = await Food.findByPk(foodId);
+//       console.log(food);
+//       if (!food) {
+//         throw { name: "NotFound" };
+//       }
+//     } else {
+//       throw { name: "Forbidden" };
+//     }
 
-    next();
-  } catch (error) {
-    console.log(error);
-    next(error);
-  }
-}
+//     next();
+//   } catch (error) {
+//     console.log(error);
+//     next(error);
+//   }
+// }
 
-module.exports = { authorization, authorizationForAdmin };
+module.exports = { authorization };
