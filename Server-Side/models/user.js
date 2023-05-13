@@ -45,6 +45,30 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      birthPlace: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: { msg: "Birth Place Cannot Be Empty" },
+          notNull: { msg: "Birth Place Cannot Be Empty" },
+        },
+      },
+      birthDate: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        validate: {
+          notEmpty: { msg: "Birth Date Cannot Be Empty" },
+          notNull: { msg: "Birth Date Cannot Be Empty" },
+        },
+      },
+      address: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: { msg: "Address Cannot Be Empty" },
+          notNull: { msg: "Address Cannot Be Empty" },
+        },
+      },
       phoneNumber: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -56,6 +80,14 @@ module.exports = (sequelize, DataTypes) => {
               throw new Error("Password Max Length 15");
             }
           },
+        },
+      },
+      role: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: { msg: "Role Cannot Be Empty" },
+          notNull: { msg: "Role Cannot Be Empty" },
         },
       },
     },

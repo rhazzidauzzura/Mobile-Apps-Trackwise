@@ -3,12 +3,20 @@
     "username": "Aman",
     "email": "adm@admin.com",
     "password": "12345",
+    "birthPlace": "Jakarta",
+    "birthDate": "22-08-2000",
+    "role": "penindak",
+    "address": "Sukabumi",
     "phoneNumber": "081779556055"
   },
   {
     "username": "Rhazzid",
     "email": "adm2@admin.com",
     "password": "12345",
+    "birthPlace": "Jakarta",
+    "birthDate": "22-08-1999",
+    "role": "penindak",
+    "address": "Jakarta",
     "phoneNumber": "081779999052"
   }
 ]

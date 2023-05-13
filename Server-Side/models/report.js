@@ -21,28 +21,20 @@ module.exports = (sequelize, DataTypes) => {
           notNull: { msg: "Name Cannot Be Empty" },
         },
       },
-      age: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          notEmpty: { msg: "Age Cannot Be Empty" },
-          notNull: { msg: "Age Cannot Be Empty" },
-        },
-      },
-      from: {
+      message: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          notEmpty: { msg: "From Cannot Be Empty" },
-          notNull: { msg: "From Cannot Be Empty" },
+          notEmpty: { msg: "Message Cannot Be Empty" },
+          notNull: { msg: "Message Cannot Be Empty" },
         },
       },
-      description: {
+      phoneNumber: {
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
-          notEmpty: { msg: "Description Cannot Be Empty" },
-          notNull: { msg: "Description Cannot Be Empty" },
+          notEmpty: { msg: "Phone Number Cannot Be Empty" },
+          notNull: { msg: "Phone Number Cannot Be Empty" },
         },
       },
       long: {

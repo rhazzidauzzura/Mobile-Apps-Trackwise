@@ -13,16 +13,12 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      age: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      from: {
+      message: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      description: {
-        type: Sequelize.TEXT,
+      phoneNumber: {
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       long: {

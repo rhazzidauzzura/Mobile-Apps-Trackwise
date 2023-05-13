@@ -22,7 +22,23 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      birthPlace: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      birthDate: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
       phoneNumber: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      address: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      role: {
         type: Sequelize.STRING,
         allowNull: false,
       },
