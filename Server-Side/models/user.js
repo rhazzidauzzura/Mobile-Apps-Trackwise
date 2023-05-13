@@ -51,6 +51,11 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notEmpty: { msg: "NIK Cannot Be Empty" },
           notNull: { msg: "NIK Cannot Be Empty" },
+          validateNIK() {
+            if (this.NIK.length > 20) {
+              throw new Error("NIK Max Length 19");
+            }
+          },
         },
       },
       birthPlace: {
