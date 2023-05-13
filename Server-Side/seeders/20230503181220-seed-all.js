@@ -7,6 +7,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     const users = require("../data/User.json").map((el) => {
       el.password = hashingPassword(el.password);
+      el.birthDate = new Date();
       el.createdAt = el.updatedAt = new Date();
       return el;
     });
