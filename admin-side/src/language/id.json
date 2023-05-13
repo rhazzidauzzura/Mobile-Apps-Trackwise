@@ -1,8 +1,7 @@
 {
   "photo": "Foto",
   "name": "Nama",
-  "description": "Deskripsi",
-  "age": "Umur",
+  "message": "Pesan",
   "from": "Asal",
   "home": "Beranda",
   "add-admin": "Tambah Admin",
@@ -12,7 +11,11 @@
   "admin-new": "Daftar Admin Baru",
   "username": "Nama Pengguna",
   "password": "Kata Sandi",
-  "phone-number": "Nomer Telpon",
+  "phone-number": "Nomer Telepon",
+  "birth-place": "Tempat Lahir",
+  "birth-date": "Tanggal Lahir",
+  "address": "Alamat",
+  "role": "Peran",
   "save": "Simpan",
   "forgot": "Lupa",
   "signin-title": "Masuk Ke Akun Anda"

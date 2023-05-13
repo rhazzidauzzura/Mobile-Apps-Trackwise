@@ -19,12 +19,11 @@ export default function Table(props) {
           </div>
         </div>
       </td>
-      <td>
+      {/* <td>
         <p className="font-semibold  uppercase dark:text-white">{reports.name}</p>
-      </td>
-      <td>{reports.age}</td>
-      <td>{reports.from}</td>
-      <td className="text-[#ff0000]">{reports.description}</td>
+      </td> */}
+      <td>{reports.phoneNumber}</td>
+      <td className="text-[#ff0000]">{reports.message}</td>
       <Link to={`/details/${reports.id}`}>
         <td>
           <button className="btn btn-ghost btn-xs">details</button>

@@ -47,11 +47,12 @@ const Details = () => {
                   {t("name")}: {report.data.name}
                 </h1>
                 <h1 className="text-2xl font-semibold mt-4 font-serif">
-                  {t("age")}: {report.data.age}
+                  {t("phoneNumber")}: {report.data.phoneNumber}
                 </h1>
-                <h1 className="text-2xl font-semibold mt-4 font-serif">{t("description")}: </h1>
+
+                <h1 className="text-2xl font-semibold mt-4 font-serif">{t("message")}: </h1>
               </div>
-              <p className="text-gray-800">{report.data.description}</p>
+              <p className="text-gray-800">{report.data.message}</p>
             </div>
           </div>
         </>

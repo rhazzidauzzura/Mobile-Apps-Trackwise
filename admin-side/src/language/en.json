@@ -1,8 +1,7 @@
 {
   "photo": "Photo",
   "name": "Name",
-  "description": "Description",
-  "age": "Age",
+  "message": "Message",
   "from": "From",
   "home": "Home",
   "add-admin": "Add Admin",
@@ -13,6 +12,10 @@
   "username": "Username",
   "password": "Password",
   "phone-number": "Phone Number",
+  "birth-place": "Birth Place",
+  "birth-date": "Birth Date",
+  "address": "Address",
+  "role": "Role",
   "save": "Save",
   "forgot": "Forgot",
   "signin-title": "Sign in to your account"
