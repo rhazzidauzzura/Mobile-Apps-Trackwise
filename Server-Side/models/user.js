@@ -45,6 +45,14 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      NIK: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: { msg: "NIK Cannot Be Empty" },
+          notNull: { msg: "NIK Cannot Be Empty" },
+        },
+      },
       birthPlace: {
         type: DataTypes.STRING,
         allowNull: false,

@@ -22,6 +22,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      NIK: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       birthPlace: {
         type: Sequelize.STRING,
         allowNull: false,
