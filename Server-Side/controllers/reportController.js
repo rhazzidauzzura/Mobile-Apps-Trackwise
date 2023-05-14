@@ -1,10 +1,14 @@
 const { sendFile } = require("../helpers/cloudinary");
-const { Report } = require("../models");
+const { Report, User } = require("../models");
 
 class reportController {
   static async getReport(req, res, next) {
     try {
       let reports = await Report.findAll({
+        include: {
+          model: User,
+          attributes: ["email"],
+        },
         order: [["createdAt", "asc"]],
       });
       res.status(200).json(reports);
@@ -16,6 +20,8 @@ class reportController {
   static async postReport(req, res, next) {
     try {
       let { name, message, long, lat, phoneNumber } = req.body;
+      const { id } = req.user;
+      console.log(id, "<<<<<");
 
       console.log(req.body);
       const file = req.file;
@@ -23,9 +29,9 @@ class reportController {
       if (file) {
         const result = await sendFile(file);
         const photo = result.secure_url;
-        const report = await Report.create({ name, age, message, long, lat, phoneNumber, photo: photo });
+        const report = await Report.create({ name, message, long, lat, phoneNumber, photo: photo, UserId: id });
       } else {
-        const report = await Report.create({ name, age, message, long, lat, phoneNumber, photo: "" });
+        const report = await Report.create({ name, message, long, lat, phoneNumber, photo: "", UserId: id });
       }
 
       res.status(201).json({ message: "Report Sent Successfully" });
@@ -38,7 +44,13 @@ class reportController {
   static async getReportById(req, res, next) {
     try {
       const { reportId } = req.params;
-      const reportById = await Report.findOne({ where: { id: reportId } });
+      const reportById = await Report.findOne({
+        where: { id: reportId },
+        include: {
+          model: User,
+          attributes: ["email"],
+        },
+      });
       if (!reportById) {
         return res.status(404).json({ message: `Report Not Found` });
       }

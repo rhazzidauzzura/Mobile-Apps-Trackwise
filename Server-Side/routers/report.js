@@ -5,7 +5,7 @@ const { authentication } = require("../middleware/authentication");
 const { authorization } = require("../middleware/authorization");
 
 // User
-router.post("/report", upload.single("image"), reportController.postReport);
+router.post("/report", authentication, upload.single("image"), reportController.postReport);
 
 router.get("/reports", authentication, authorization, reportController.getReport);
 router.get("/report/:reportId", authentication, authorization, reportController.getReportById);

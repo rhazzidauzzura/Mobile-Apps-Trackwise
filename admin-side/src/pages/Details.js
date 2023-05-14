@@ -21,6 +21,8 @@ const Details = () => {
     dispatch(reportById(id));
   }, []);
 
+  console.log(report);
+
   return (
     <>
       {loading && (
@@ -47,7 +49,10 @@ const Details = () => {
                   {t("name")}: {report.data.name}
                 </h1>
                 <h1 className="text-2xl font-semibold mt-4 font-serif">
-                  {t("phoneNumber")}: {report.data.phoneNumber}
+                  {t("phone-number")}: {report.data.phoneNumber}
+                </h1>
+                <h1 className="text-2xl font-semibold mt-4 font-serif text-blue-600">
+                  {t("created-by")}: {report.data.User.email}
                 </h1>
 
                 <h1 className="text-2xl font-semibold mt-4 font-serif">{t("message")}: </h1>

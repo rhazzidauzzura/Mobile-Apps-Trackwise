@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Report);
     }
   }
   User.init(
@@ -84,7 +85,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       phoneNumber: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notEmpty: { msg: "Phone Number Cannot Be Empty" },
