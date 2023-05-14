@@ -41,7 +41,6 @@ export default function Dashboard(params) {
                   <th>{t("phone-number")}</th>
                   <th>{t("message")}</th>
                   <th>{t("created-by")}</th>
-
                   <th></th>
                 </tr>
               </thead>
