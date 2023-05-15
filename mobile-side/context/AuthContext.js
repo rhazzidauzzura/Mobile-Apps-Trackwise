@@ -1,17 +1,11 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Home from "./pages/home";
 import * as React from 'react';
 import storage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { ActivityIndicator, View } from "react-native";
-import { AuthContext } from "./context/AuthContext"
 
-const Stack = createNativeStackNavigator();
+export const AuthContext = React.createContext();
 
-export default function App() {
+export default function AuthProvider({children}) {
   const [state, dispatch] = React.useReducer(
     (prevState, action) => {
       switch (action.type) {
@@ -40,6 +34,7 @@ export default function App() {
   );
 
   React.useEffect(() => {
+    console.log('aku')
     const bootstrapAsync = async () => {
       let userToken;
 
@@ -70,6 +65,7 @@ export default function App() {
         dispatch({ type: 'SIGN_IN', token: token });
       },
       signOut: () => dispatch({ type: 'SIGN_OUT' }),
+      ...state
     }),
     []
   );
@@ -81,13 +77,9 @@ export default function App() {
       </View>
     );
   return (
-    <NavigationContainer>
-        <Stack.Navigator>
-          {!state.userToken ? <>
-            <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-            <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
-          </> : <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />}
-        </Stack.Navigator>
-    </NavigationContainer>
+      <AuthContext.Provider value={authContext}>
+        {children}
+      </AuthContext.Provider>
   );
 }
+
