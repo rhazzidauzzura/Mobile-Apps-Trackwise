@@ -5,7 +5,14 @@
     "description": "Deskripsi",
     "upload-image": "Unggah Gambar",
     "submit": "Kirim",
-    "from" : "From"
+    "from": "Asal",
+    "password": "Kata Sandi",
+    "phone": "Nomer Telpon",
+    "birthPlace": "Tempat Lahir",
+    "birthDate": "Tanggal Lahir",
+    "address": "Alamat",
+    "have-account": "Punya Akun?",
+    "register": "Daftar"
   },
   "en": {
     "name": "Name",
@@ -13,6 +20,13 @@
     "description": "Description",
     "upload-image": "Upload Image",
     "submit": "Submit",
-    "from" : "Asal"
+    "from": "From",
+    "password": "Kata Sandi",
+    "phone": "Phone Number",
+    "birthPlace": "Birth Place",
+    "have-account": "Have an account?",
+    "birthDate": "Birth Date",
+    "address": "Address",
+    "register": "Register"
   }
 }
