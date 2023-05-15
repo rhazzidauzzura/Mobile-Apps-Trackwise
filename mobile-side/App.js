@@ -82,7 +82,7 @@ export default function App() {
     );
   return (
     <NavigationContainer>
-      <AuthContext.Provider value={authContext} >
+      <AuthContext.Provider value={{ ...authContext, userToken: state.userToken }} >
         <Stack.Navigator>
           {!state.userToken ? <>
             <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
