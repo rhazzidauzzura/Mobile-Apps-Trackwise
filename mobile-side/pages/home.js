@@ -16,12 +16,11 @@ export default function Home() {
   const [currLang, setCurrLang] = useState("id");
   const [state, setState] = useState({
     name: "",
-    ages: "",
-    from: "",
+    phoneNumber: "",
     description: "",
   });
 
-  const { signOut } = useContext(AuthContext)
+  const { signOut, userToken } = useContext(AuthContext)
 
 
   const handleCamera = async () => {
@@ -58,8 +57,7 @@ export default function Home() {
   const reset = () => {
     setState({
       name: "",
-      ages: "",
-      from: "",
+      phoneNumber: "",
       description: "",
     });
     setTakedImage("");
@@ -72,15 +70,15 @@ export default function Home() {
       const formData = new FormData();
 
       formData.append("name", state.name);
-      formData.append("age", state.ages);
-      formData.append("from", state.from);
-      formData.append("description", state.description);
+      formData.append("phoneNumber", state.phoneNumber);
+      formData.append("message", state.description);
       if (takedImage) formData.append("image", { name: new Date().getTime() + "_img", uri: takedImage, type: "image/jpeg" });
       formData.append("long", location.coords.longitude);
       formData.append("lat", location.coords.latitude);
       const res = await axios.post("https://wild-flannel-shirt-foal.cyclic.app/report", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
+          access_token : userToken
         },
       });
 
@@ -148,9 +146,7 @@ export default function Home() {
 
           <TextInput value={state.name} onChangeText={(val) => setState({ ...state, name: val })} style={styles.input} placeholder={lang[currLang].name} />
 
-          <TextInput value={state.ages} onChangeText={(val) => setState({ ...state, ages: val })} keyboardType="number-pad" style={styles.input} placeholder={lang[currLang].ages} />
-
-          <TextInput value={state.from} onChangeText={(val) => setState({ ...state, from: val })} style={styles.input} placeholder={lang[currLang].from} />
+          <TextInput value={state.phoneNumber} onChangeText={(val) => setState({ ...state, phoneNumber: val })} keyboardType="number-pad" style={styles.input} placeholder={lang[currLang].phone} />
 
           <TextInput multiline={true} numberOfLines={4} style={styles.input} textAlignVertical="top" placeholder={lang[currLang].description} value={state.description} onChangeText={(val) => setState({ ...state, description: val })} />
 
