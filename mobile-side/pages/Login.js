@@ -82,7 +82,7 @@ export default function Login() {
           }}
         />
         <View style={styles.card}>
-          <Text style={{ fontSize: 25, marginVertical: 15 }}>Login</Text>
+          <Text style={{ fontSize: 25, marginVertical: 15 }}>{lang[currLang].login}</Text>
           {errorMsg && (
             <View style={{ borderWidth: 1, borderColor: "red", padding: 7 }}>
               <Text style={{ color: "red" }}>{errorMsg}</Text>
@@ -104,10 +104,10 @@ export default function Login() {
           />
 
           <TouchableOpacity disabled={disabled} onPress={handleSubmit} style={[styles.btn, { opacity: disabled ? 0.5 : 1 }]}>
-            <Text style={styles.textBtn}>Login</Text>
+            <Text style={styles.textBtn}>{lang[currLang].login}</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={_ => navigate.navigate('Register')}>
-            <Text style={{ textAlign: 'right', color: '#0080ff', marginTop: 15, fontSize: 13 }}>Don't have any account?</Text>
+            <Text style={{ textAlign: 'right', color: '#0080ff', marginTop: 15, fontSize: 13 }}>{lang[currLang]['not-account']}</Text>
           </TouchableOpacity>
         </View>
       </View>
