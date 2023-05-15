@@ -7,7 +7,8 @@
     "birthPlace": "Jakarta",
     "role": "penindak",
     "address": "Sukabumi",
-    "phoneNumber": "081779556055"
+    "phoneNumber": "081779556055",
+    "UserId": 2
   },
   {
     "username": "Rhazzid",
@@ -17,6 +18,7 @@
     "birthPlace": "Jakarta",
     "role": "penindak",
     "address": "Jakarta",
-    "phoneNumber": "081779999052"
+    "phoneNumber": "081779999052",
+    "UserId": 1
   }
 ]

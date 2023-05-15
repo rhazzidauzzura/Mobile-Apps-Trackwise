@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Report.belongsTo(models.User, { foreignKey: "UserId" });
     }
   }
   Report.init(
@@ -30,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       phoneNumber: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notEmpty: { msg: "Phone Number Cannot Be Empty" },
@@ -55,6 +56,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       photo: {
         type: DataTypes.STRING,
+      },
+      UserId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notEmpty: { msg: "UserId Cannot Be Empty" },
+          notNull: { msg: "UserId Cannot Be Empty" },
+        },
       },
     },
 

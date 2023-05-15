@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false,
       },
       phoneNumber: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       long: {
@@ -31,6 +31,14 @@ module.exports = {
       },
       photo: {
         type: Sequelize.STRING,
+      },
+      UserId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "Users",
+          key: "id",
+        },
       },
       createdAt: {
         allowNull: false,
