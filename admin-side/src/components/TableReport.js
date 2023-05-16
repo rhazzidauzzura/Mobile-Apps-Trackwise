@@ -4,7 +4,7 @@ import { reportById } from "../store";
 
 export default function Table(props) {
   const { reports, index } = props;
-
+  console.log(props);
   return (
     <tr>
       <td>{index + 1}</td>
@@ -22,6 +22,8 @@ export default function Table(props) {
       <td>
         <p className="font-semibold  uppercase dark:text-white">{reports.name}</p>
       </td>
+      <td>{reports.User.NIK}</td>
+      <td>{reports.User.address}</td>
       <td>{reports.phoneNumber}</td>
       <td className="text-[#ff0000]">{reports.message}</td>
       <td className="text-blue-700">{reports.User.email}</td>

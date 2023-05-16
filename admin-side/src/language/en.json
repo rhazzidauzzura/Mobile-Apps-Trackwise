@@ -1,6 +1,7 @@
 {
   "photo": "Photo",
   "name": "Name",
+  "nik": "NIK",
   "message": "Message",
   "from": "From",
   "home": "Home",

@@ -38,6 +38,8 @@ export default function Dashboard(params) {
                   <th>No</th>
                   <th>{t("photo")}</th>
                   <th>{t("name")}</th>
+                  <th>{t("nik")}</th>
+                  <th>{t("from")}</th>
                   <th>{t("phone-number")}</th>
                   <th>{t("message")}</th>
                   <th>{t("created-by")}</th>

@@ -1,6 +1,7 @@
 {
   "photo": "Foto",
   "name": "Nama",
+  "nik": "NIK",
   "message": "Pesan",
   "from": "Asal",
   "home": "Beranda",

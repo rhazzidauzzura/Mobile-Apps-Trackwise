@@ -58,10 +58,10 @@ export default function Register(props) {
     }
   };
   return (
-    <div className="container w-[50%] mx-auto mt-[5rem] shadow-lg shadow-black p-7 rounded-2xl">
+    <div className="container w-[50%] mx-auto mt-[5rem] mb-[3rem] shadow-lg shadow-black p-7 rounded-2xl">
       <h1 className="font-serif text-2xl text-center mb-16">{t("admin-new")}</h1>
       <form onSubmit={submitForm}>
-        <div className="form-control   w-full">
+        <div className="form-control w-full">
           <label className="label">
             <span className="label-text">{t("username")}:</span>
           </label>
