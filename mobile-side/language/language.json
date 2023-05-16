@@ -12,7 +12,9 @@
     "birthDate": "Tanggal Lahir",
     "address": "Alamat",
     "have-account": "Punya Akun?",
-    "register": "Daftar"
+    "login": "Masuk",
+    "register": "Daftar",
+    "not-account" : "Belum punya akun?"
   },
   "en": {
     "name": "Name",
@@ -21,12 +23,14 @@
     "upload-image": "Upload Image",
     "submit": "Submit",
     "from": "From",
-    "password": "Kata Sandi",
+    "password": "Password",
     "phone": "Phone Number",
     "birthPlace": "Birth Place",
     "have-account": "Have an account?",
     "birthDate": "Birth Date",
     "address": "Address",
-    "register": "Register"
+    "register": "Register",
+    "login": "Login",
+    "not-account" : "Don't have any account?"
   }
 }

@@ -175,7 +175,7 @@ export default function Register() {
               onPress={showDatepicker}
               style={[styles.input, { paddingVertical: 13 }]}
               >
-              <Text style={{ opacity: 0.4 }}>{state.birthDate ? new Date(state.birthDate).toLocaleDateString() : lang[currLang].birthPlace}</Text>
+              <Text style={{ opacity: 0.4 }}>{state.birthDate ? new Date(state.birthDate).toLocaleDateString() : lang[currLang].birthDate}</Text>
             </TouchableOpacity>
 
             <TextInput
